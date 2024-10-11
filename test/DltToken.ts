@@ -127,7 +127,7 @@ describe("DLT TOKEN", function () {
           await token.approve(otherAccount.address, approveAmount);
           expect(await token.allowance(owner.address, otherAccount.address)).to.equal(approveAmount);
 
-          // Change approval to another amount
+        
           const newApproveAmount = 500;
           await token.approve(otherAccount.address, newApproveAmount);
           expect(await token.allowance(owner.address, otherAccount.address)).to.equal(newApproveAmount);
